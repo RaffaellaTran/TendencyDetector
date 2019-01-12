@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.app.raffaellatran.tendencydetector"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}packagingOptions {
+    exclude 'org/apache/commons/codec/language/bm/*.txt'
+    exclude 'org/apache/commons/codec/language/*.txt'
+    exclude 'stylesheet.css'
+    exclude 'allclasses-frame.html'
+    exclude 'package-list'
+    exclude 'index-all.html'
+    exclude 'serialized-form.html'
+    exclude 'constant-values.html'
+    exclude 'help-doc.html'
+    exclude 'deprecated-list.html'
+    exclude 'allclasses-noframe.html'
+    exclude 'index.html'
+    exclude 'overview-summary.html'
+    exclude 'script.js'
+    exclude 'overview-frame.html'
+    exclude 'overview-tree.html'
+    exclude'META-INF/DEPENDENCIES'
+    exclude'META-INF/INDEX.LIST'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    compileOnly 'org.projectlombok:lombok:1.16.16'
+    annotationProcessor 'org.projectlombok:lombok:1.16.16'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    // Include all the Twitter APIs
+    implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
+    implementation 'com.twitter.sdk.android:tweet-ui:3.3.0'
+    implementation 'com.google.dagger:dagger:2.11'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0-alpha1'
+    implementation 'com.android.support:cardview-v7:28.0.0-alpha1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.2.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.0.1'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.0.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.android.support:design:28.0.0-alpha1'
+    implementation 'com.github.anastr:speedviewlib:1.2.0'
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.10.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support:support-annotations:28.0.0-alpha1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
+    apply plugin: 'com.android.application'
+    implementation 'com.github.akarnokd:rxjava2-extensions:0.20.3'
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
+    //implementation "javax.xml.bind:jaxb-api:2.3.0"
+    //testImplementation('javax.xml.bind:jaxb-api')
+    //or apply plugin: 'java'
+    /*configurations.all {
+                    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+                        def requested = details.requested
+                        if (requested.group == 'pl.pawelkleczkowski.customgauge') {
+                            if (!requested.name.startsWith("multidex")) {
+                                details.useVersion '1.0.3'
+                            }
+                        }
+                    }
+                }*/
+    implementation files('libs/commons-codec-1.11-javadoc.jar')
+    implementation files('libs/commons-codec-1.11-sources.jar')
+    implementation files('libs/commons-codec-1.11-tests.jar')
+    implementation files('libs/twitter4j-async-4.0.7.jar')
+    implementation files('libs/twitter4j-core-4.0.7.jar')
+    implementation files('libs/twitter4j-examples-4.0.7.jar')
+    implementation files('libs/twitter4j-stream-4.0.7.jar')
+    implementation files('libs/javax.xml.bind.jar')
+
+
+}
+

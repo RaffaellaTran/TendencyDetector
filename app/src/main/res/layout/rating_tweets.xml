@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/rating_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null" />
+
+    <TextView
+        android:id="@+id/rating_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:hint="@string/sentence"
+
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/rating_toolbar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.anastr.speedviewlib.PointerSpeedometer
+        android:id="@+id/pointerSpeedometer"
+        android:layout_width="204dp"
+        android:layout_height="203dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_text"
+        app:sv_backgroundCircleColor="@color/colorDarkBlue"
+        app:sv_speedometerColor="@color/colorBlue"
+        app:sv_unit="positiveness"
+        app:sv_unitUnderSpeedText="true" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="205dp"
+        android:layout_height="218dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointerSpeedometer" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/donut_chart"
+        android:layout_width="0dp"
+        android:layout_height="218dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pie_chart"
+        app:layout_constraintTop_toTopOf="@+id/pie_chart" />
+
+</android.support.constraint.ConstraintLayout>

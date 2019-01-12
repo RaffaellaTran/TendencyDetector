@@ -1,0 +1,15 @@
+
+<dependencies>
+   <!-- <dependency>
+        <groupId>com.aylien.textapi</groupId>
+        <artifactId>client</artifactId>
+        <version>0.5.1</version>
+    </dependency>-->
+<!--<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.3.0</version>
+</dependency>-->
+
+</dependencies>
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    tools:context=".view.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/title_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@drawable/circle"
+            android:onClick="getUserTimeline"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_launcher"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/username" />
+
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logout"
+            android:background="@null"
+            android:onClick="logoutTwitter"
+            android:layout_gravity="end"
+            android:text="@string/log_out"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <SearchView
+        android:id="@+id/enter_search_query"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/rating_tweet_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rating_tweet_button" />
+
+    <Button
+        android:id="@+id/rating_tweet_button"
+        android:layout_width="77dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+
+        android:text="RatingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_search_query">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@id/android:empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/no_tweets" />
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "703872508791",
+    "firebase_url": "https://tendencydetector.firebaseio.com",
+    "project_id": "tendencydetector",
+    "storage_bucket": "tendencydetector.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703872508791:android:2765b1f4ccda0aaf",
+        "android_client_info": {
+          "package_name": "com.app.raffaellatran.tendencydetector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703872508791-r5mrhsofk6gcrvlfu7ncg1c7vplv9b7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlG57GcMnU0i_DdewcTqA-R06DoyJnKG4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
